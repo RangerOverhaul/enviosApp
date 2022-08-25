@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="container">
+
+	<div class="row input-container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <h1>{{ tittle }}</h1>
+            {{ form.as_p }}
+            <input type="submit" value="Continuar">
+        </form>
+
+	</div>
+</div>
+{% endblock %}

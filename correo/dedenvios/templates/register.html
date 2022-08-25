@@ -1,0 +1,20 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+    <h1>Registro</h1>
+    <form action="" method="post" class="box">
+        {% csrf_token %}
+        <h1>Registo de usuarios </h1>
+        {{ form.as_p }}
+        <button type="submit"  id="submit">enviar </button>
+    </form>
+    {% if messages %}
+        {% for message in messages %}
+            <div>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+{% endblock %}

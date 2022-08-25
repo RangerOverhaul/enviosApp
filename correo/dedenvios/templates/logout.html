@@ -1,0 +1,21 @@
+{% extends 'Layout.html' %}
+{% block content %}
+
+    <form action="" method="post" class="box">
+        {% csrf_token %}
+        <h1>Logout</h1>
+        {{ form.as_p }}
+        <button type="submit"  id="submit">salir </button>
+    </form>
+    {% if messages %}
+        {% for message in messages %}
+            <div>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+    <button onclick="location.href='thing/'" class="fadeIn fourth">Go Back</button>
+
+  </div>
+</div>
+{% endblock %}

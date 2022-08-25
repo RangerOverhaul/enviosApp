@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="container">
+	<div class="row">
+        <h1 class="profile" > {{ tittle }} </h1>
+
+	</div>
+	<div class="row input-container">
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="sigiente">
+        </form>
+
+	</div>
+</div>
+{% endblock %}

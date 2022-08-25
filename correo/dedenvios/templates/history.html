@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<h1 class="profile" > {{ tittle }} </h1>
+        {% if pac %}
+        <div>
+        <ul>
+            
+            {% for f in pac %}
+				<br>
+				<br>
+				<li> Paquete: {{ f.pack_name }}</li>
+                <li> Peso:  {{ f.pack_weight }}</li>
+                <li> Tipo de entrega: {{ f.service }}</li>
+                <li> ID del destinatario: {{ f.destiny }}</li>
+                <li> Fecha de entrega:  {{ f.date_send }}</li>
+                <li> Fecha de recibido:  {{ f.date_recibe }}</li>
+                <li> Costo:  {{ f.cost }}</li>
+            {% endfor %}
+        </ul>
+		<br>
+		<br>
+        {% else %}
+            <p>Usted no ha enviado paquetes aun.</p>
+        {% endif %}
+    </div>
+
+{% endblock %}
+
+

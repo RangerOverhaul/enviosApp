@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <form action="" method="post" class="box">
+        {% csrf_token %}
+        <div>
+            <div>
+            <h4 class="profile" > <strong> {{ h }} </strong>   </h4>
+            <br>
+              <p class="profile"> {{ current_user}} </p>
+            </div>
+            <br>
+            <div>
+            <h4 class="profile" ><strong> ID </strong> {{ iduser }}  </h4>
+            </div>
+            <br>
+        </div>
+        <button onclick="location.href='{% url 'thing' iduser %}' "> Nuevo envio </button>
+        <ul>
+            <li> <a  href="{% url 'thing' iduser %}" > Nuevo envio </a> </li>
+            <li> <a  href="{% url 'history' %}" > Historial de envios </a> </li>
+        </ul>
+
+    </form>
+{% endblock %}
