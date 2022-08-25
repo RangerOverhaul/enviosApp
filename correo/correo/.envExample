@@ -1,0 +1,17 @@
+DEDENVIOS_DEBUG=
+DEDENVIOS_SECRET_KEY=
+DEDENVIOS_DB_NAME=
+SSP_DEBUG=
+SSP_SECRET_KEY=
+SSP_DB_NAME=
+SSP_USR=
+SSP_PWD=
+SSP_HOST=
+SSP_PORT=
+
+
+DeDe_broker_usr=
+DeDe_broker_pass=
+DeDe_broker_host=
+DeDe_broker_port=
+DeDe_broker_vhost=
