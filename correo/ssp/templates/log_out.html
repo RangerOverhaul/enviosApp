@@ -1,0 +1,18 @@
+{% extends 'Layout.html' %}
+
+{% block content %}
+
+    <form action=""  class="box">
+
+          <button onclick="location.href='{% url 'index' %}'" class="fadeIn fourth">Get Out</button>
+    </form>
+    {% if messages %}
+        {% for message in messages %}
+            <div>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+
+
+{% endblock %}

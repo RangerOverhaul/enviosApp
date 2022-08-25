@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loggin</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'ssp/log.css' %}">
+</head>
+<body>
+ <div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active"> Sign In </h2>
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="{% static 'ssp/log.css' %}" id="icon" />
+    </div>
+
+    <!-- Login Form -->
+    <form action="" method="post" class="box">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit"  id="submit">entrar </button>
+    </form>
+    {% if messages %}
+        {% for message in messages %}
+            <div>
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+      <br>
+      <button onclick="location.href='signup/'" class="fadeIn fourth">SignUp</button>
+  </div>
+
+</div>
+
+</body>
+</html>
