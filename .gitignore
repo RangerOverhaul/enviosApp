@@ -1,0 +1,6 @@
+.idea/
+correo/.idea/
+correo/.vscode/
+correo/dedenvios/migrations/
+correo/ssp/migrations/
+correo/correo/.env
